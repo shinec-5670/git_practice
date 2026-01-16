@@ -32,15 +32,4 @@ app.include_router(report_router)
 app.include_router(stt_router)
 app.include_router(goalskill_router)
 
-# 프론트엔드 정적 파일 연결
-# 현재 파일 위치 기준 상위 폴더의 front 폴더를 찾습니다.
-current_dir = os.path.dirname(os.path.abspath(__file__))
-front_path = os.path.join(os.path.dirname(current_dir), "front")
 
-if os.path.exists(front_path):
-    app.mount("/", StaticFiles(directory=front_path, html=True), name="static")
-
-if __name__ == "__main__":
-    import uvicorn
-    # 실행 시: back 폴더에서 python main.py
-    uvicorn.run(app, host="0.0.0.0", port=5450, log_level="debug")
