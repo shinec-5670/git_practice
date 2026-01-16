@@ -33,4 +33,4 @@ app.include_router(stt_router)
 app.include_router(goalskill_router)
 
 
-#수정했어요  112ㅁㄴㅇㅁㄴㅇ
+#수정했어요  112ㅁㄴㅇㅁㄴㅇㅇㄹㅇㅇ
